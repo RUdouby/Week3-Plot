@@ -1,0 +1,31 @@
+---
+title: "OldFaithful_Plot"
+author: "RUdouby"
+date: "4/22/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plot Using Plotly
+
+This is a plot of the duration of Old Faithful's eruptions based on the waiting time between eruptions.
+
+```{r date, echo=FALSE}
+        Date <- format(Sys.Date(), "%A %d, %Y")
+        
+```
+
+`r Date`
+
+## Plot of Old Faithful Eruptions
+
+```{r plot, message=FALSE}
+        library(plotly)
+        faithful <- (faithful)
+        plot_ly(faithful, x = faithful$waiting, y = faithful$eruptions, mode = "markers")
+```
+
+
